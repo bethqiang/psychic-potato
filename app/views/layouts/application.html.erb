@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Myapp</title>
+    <title>Psychic Potato</title>
     <%= csrf_meta_tags %>
     <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,9 +11,34 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- Our pages get injected here. -->
-      <%= yield %>
-    </div>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <a href="/" class="navbar-brand"><i class="fa fa-superpowers"></i> Psychic Potato</a> -->
+          <!-- The Ruby way to do links. Equals sign means you're spitting something out in HTML. -->
+          <!-- root_path will always go to prefix root with rails routes cmd -->
+          <%= link_to root_path, class: "navbar-brand" do %>
+            <i class="fa fa-superpowers"></i>
+            Psychic Potato
+          <% end %>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="/about">About</a></li> -->
+            <!-- about_path will always go to prefix about with rails routes cmd -->
+            <li><%= link_to "About", about_path %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Our pages get injected here. -->
+    <%= yield %>
   </body>
 </html>

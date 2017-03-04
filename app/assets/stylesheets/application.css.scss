@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+body {
+  font-family: 'Oxygen', sans-serif;
+}
+
+// Navbar
+
+.navbar {
+  border: none;
+  color: white;
+}
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
+  color: white;
+
+  &:hover {
+    color: white;
+    opacity: 0.50;
+  }
+}
+
+.navbar-default .navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
+
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+
+  &:hover, &:focus {
+    background-color: #B06AB3;
+  }
+}
+
+// Background gradient
+
+.navbar, .home-callout {
+  // Gradient rovided by @_ighosh at uigradients.com
+  background: #4568DC; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #4568DC , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #4568DC , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// Homepage
+
+.home-callout {
+  margin-top: -20px;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  color: white;
+}
