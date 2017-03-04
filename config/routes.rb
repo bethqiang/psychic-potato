@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  # Root needs to point to the pages controller > home method
+  # Then, Rails checks the controller file, finds the home method,
+  # and says I need to gather the corresponding view file
+  root to: 'pages#home'
 end
