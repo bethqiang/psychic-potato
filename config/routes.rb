@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   # When a client hits /about, Rails will check the controller file &
   # find the about method
   get 'about', to: 'pages#about'
+  # Instead of doing `get 'contacts/new', to: 'contacts#new' --
+  # Creates a bunch of routes for us
+  resources :contacts
 end
