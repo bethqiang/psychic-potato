@@ -3,3 +3,25 @@
   <h1>Psychic Potato</h1>
   <h3>Like a magic 8 ball. But a potato.</h3>
 </div>
+<div class="container home-signup-links">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Basic Membership</h2>
+        <h4>Sign up for free and get access to the coolest potatoes ever. Limited time offer.</h4>
+        <br/>
+        <!-- URL now becomes /users/sign_up?plan=1 -->
+        <!-- You can use this on the next page -->
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Pro Membership</h2>
+        <h4>Sign up for $10/month and get access to potatoes that speak to you. Sorta.</h4>
+        <br/>
+        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block' %>
+      </div>
+    </div>
+  </div>
+</div>
