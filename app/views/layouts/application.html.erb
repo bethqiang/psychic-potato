@@ -39,6 +39,16 @@
       </div>
     </nav>
 
+    <!-- For each key-value pair we have in our flash hash, create a div tag
+    with the message inside of it and the corresponding Bootstrap class -->
+    <!-- This is here instead of in contacts/new.html.erb just in case in the future
+    we want to redirect to somewhere that's not the contacts page -->
+    <div class="container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
+    </div>
+
     <!-- Our pages get injected here. -->
     <%= yield %>
   </body>
