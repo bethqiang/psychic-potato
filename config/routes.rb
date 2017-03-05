@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   # find the about method
   get 'about', to: 'pages#about'
   # Instead of doing `get 'contacts/new', to: 'contacts#new' --
-  # Creates a bunch of routes for us
-  resources :contacts
+  # Creates a bunch of routes for us, but we're telling it we only need the create action
+  resources :contacts, only: [:create]
+  # Without the line below, we'd also need the new action
+  # But we want a custom URL
+  # We can still use new_contact_path in our navbar link, so we can set an alias
+  get 'contact-us', to: 'contacts#new', as: "new_contact"
 end
