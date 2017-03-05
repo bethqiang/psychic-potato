@@ -4,7 +4,7 @@
 # we should put this in our Contact class
 
 class Contact < ActiveRecord::Base
-  # Only go through if someone fills out everything
+  # Contact form validations - only send if someone fills out everything
   validates :name, presence: true
   validates :email, presence: true
   validates :comments, presence: true
