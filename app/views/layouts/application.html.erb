@@ -54,7 +54,7 @@
     with the message inside of it and the corresponding Bootstrap class -->
     <!-- This is here instead of in contacts/new.html.erb just in case in the future
     we want to redirect to somewhere that's not the contacts page -->
-    <div class="container">
+    <div class="container flash-container">
       <% flash.each do |type, msg| %>
         <%= content_tag :div, msg, class: "alert alert-#{type}" %>
       <% end %>
