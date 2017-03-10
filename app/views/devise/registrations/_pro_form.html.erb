@@ -4,6 +4,9 @@
   <!-- Hidden field will capture the plan number as another input field that will be submitted -->
   <%= hidden_field_tag 'plan', params[:plan] %>
 
+  <!-- Tags with an `f.` in front of them will be saved to our database
+  Tags without & with nil will not be saved -->
+
   <div class="field form-group">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>
